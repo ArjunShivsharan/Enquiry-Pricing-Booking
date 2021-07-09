@@ -16,9 +16,7 @@ public class  TestNGSuiteRunner {
 		System.out.println("Currently running thread :" + id);
         suites.add("C:\\Users\\Mallikarjun.Shivshar\\eclipse-workspace\\ICMS_EP2\\enquirytestng.xml");
         suites.add("C:\\Users\\Mallikarjun.Shivshar\\eclipse-workspace\\ICMS_EP2\\pricingtestng.xml");
-        suites.add("C:\\Users\\Mallikarjun.Shivshar\\eclipse-workspace\\ICMS_EP2\\bookingtestng.xml");
-        
-		obj.setTestSuites(suites);
+        obj.setTestSuites(suites);
 		obj.run();
 	    
 	}
