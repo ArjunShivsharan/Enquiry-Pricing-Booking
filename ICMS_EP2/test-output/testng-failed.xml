@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.org.testcases.BookingTest">
+      <class name="com.org.testcases.EnquiryPunchTest">
         <methods>
+          <include name="closeDatabase"/>
           <include name="setUpSuite"/>
-          <include name="getEnquiryNumberTest"/>
-          <include name="createBookingTest"/>
+          <include name="closeDriver"/>
           <include name="setUp"/>
+          <include name="openDatabase"/>
+          <include name="newInquiryPunchTest"/>
         </methods>
-      </class> <!-- com.org.testcases.BookingTest -->
+      </class> <!-- com.org.testcases.EnquiryPunchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
