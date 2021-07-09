@@ -69,7 +69,9 @@ public class EnquiryElements
 	
 	public void login(String username, String password) throws Exception 
 	{
+		uname.clear();
 		uname.sendKeys(username); 
+		pass.clear();
 		pass.sendKeys(password);
 		loginButton.click();
 	}
@@ -265,9 +267,8 @@ public class EnquiryElements
 		        for(String st: str)
 		        {
 		           enq_number = st;
-		           System.out.println("Enquiry Generated Successfully : "+enq_number);
 		        }
-		        
+		        System.out.println("Enquiry Generated Successfully: "+enq_number);
 		        //*****Below Code in Try Catch Block is to send Inquiry ID to Excel, SO that we can use that for Pricing********
 		        try 
 		    	{

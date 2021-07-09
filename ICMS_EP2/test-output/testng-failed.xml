@@ -5,11 +5,12 @@
     <classes>
       <class name="com.org.testcases.EnquiryPunchTest">
         <methods>
-          <include name="closeDatabase"/>
+          <include name="loginWithValidCredentials"/>
+          <include name="searchItemTest"/>
           <include name="setUpSuite"/>
           <include name="closeDriver"/>
+          <include name="loginAppWithInvalidCredentials"/>
           <include name="setUp"/>
-          <include name="openDatabase"/>
           <include name="newInquiryPunchTest"/>
         </methods>
       </class> <!-- com.org.testcases.EnquiryPunchTest -->
