@@ -22,8 +22,6 @@ public class EnquiryPunchTest
 {
 	WebDriver driver;
 	EnquiryElements enquiry;
-	Connection connection;
-	
 	
 
 	@BeforeSuite
