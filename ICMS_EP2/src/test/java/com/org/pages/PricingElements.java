@@ -174,7 +174,7 @@ public class PricingElements {
 		Thread.sleep(2000);
 		okbtn.click();
 		Thread.sleep(1000);
-		System.out.println("Final Quotation done successfully for two carriers at "+Helper.getCurrentDateTime());
+		System.out.println("Final Quotation done successfully for one carriers at "+Helper.getCurrentDateTime());
 		driver.findElement(By.id("txtToAddress")).clear();
 		Thread.sleep(500);
 		driver.findElement(By.id("txtToAddress")).sendKeys("mallikarjun.shivsharan@sharpitech.in");
