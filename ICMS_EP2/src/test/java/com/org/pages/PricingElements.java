@@ -56,8 +56,13 @@ public class PricingElements {
 	@FindBy(id = "btnFinish") WebElement btnFinish;
 
 	public void login(String username, String password) throws Exception {
+		uname.clear();
+		Thread.sleep(1000);
 		uname.sendKeys(username);
+		Thread.sleep(1000);
+		pass.clear();
 		pass.sendKeys(password);
+		Thread.sleep(1000);
 		loginButton.click();
 	}
 
