@@ -63,14 +63,14 @@ public class PricingElements {
 
 	public void searchItem(String item) throws InterruptedException 
 	{
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		bar.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		search.sendKeys(item);
-
+		Thread.sleep(2000);
 		List<WebElement> list = driver.findElements(By.id("sidebarMenu"));
-
+		Thread.sleep(2000);
 		for (WebElement element : list) {
 			if (element.getText().contains(item)) {
 			element.findElement(By.linkText(item)).click();}
