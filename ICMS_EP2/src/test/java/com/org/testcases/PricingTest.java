@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,6 +21,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.org.pages.EnquiryElements;
 import com.org.pages.PricingElements;
 
 public class PricingTest 
@@ -63,6 +65,19 @@ public class PricingTest
 	
 	
 	@Test(priority = 1)
+	   public void loginAppWithInvalidCredentials() throws Exception 
+	   {
+		   pricing = PageFactory.initElements(driver, PricingElements.class);
+		   pricing.login("invalidUsername","invalidPassword"); 
+		   System.out.println("Logging In with Invalid Credentials : Username: invalidUsername , Password: invalidPassword");
+		   Thread.sleep(2000);
+		   String error = driver.findElement(By.cssSelector("div[class='alert alert-danger']")).getText();
+		   System.out.println(error);
+		   Thread.sleep(2000);
+		   System.out.println("Please try with correct credentials");
+		}
+	
+	@Test(priority = 2)
 	public void loginApp() throws Exception {
 		
 		pricing = PageFactory.initElements(driver, PricingElements.class);
@@ -70,13 +85,13 @@ public class PricingTest
 		System.out.println("Logged In using credentials as Username:darshana.g and Password: nil1 ");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void searchItemTest() throws InterruptedException {
 		System.out.println("Pricing Process Started..");
 		pricing.searchItem("Order Pricing");
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void startPricingTest() throws Exception {
 		try {
 			
